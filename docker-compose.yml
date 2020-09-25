@@ -1,0 +1,14 @@
+version: "3.2"
+
+services:
+#MQTT-LORA-MESH
+  glpi:
+    image: pvrmza/docker-mqtt-lora-mesh
+    container_name : mqtt
+    hostname: mqtt
+    ports:
+      - "1883:1883"
+      - "4200:4200"
+    environment:
+      - TIMEZONE=America/Argentina/Mendoza
+    restart: always
